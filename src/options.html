@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CapTube Options</title>
+    <style>
+        body {
+            min-width: 600px;
+            min-height: 550px;  /* Maximum size without scroll bar allowed by Chrome */
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 16;
+            font-weight: bold;
+            text-align: center;
+            line-height: 0;
+            margin-bottom: 16px;
+            color: hsl(0, 0%, 40%);
+        }
+
+        textarea#settings {
+            margin: 0 auto;
+            width: 600px;
+            height: 440px;
+            padding: 10px;
+            font-size: 14px;
+            font-family: monospace;
+            background: hsl(0, 0%, 97%);
+            border: 1px solid hsl(0, 0%, 87%);
+            color: hsl(0, 0%, 20%);
+            resize: none;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .buttons button+button,
+        .buttons button+span {
+            margin-left: 10px;
+        }
+
+        .buttons #status {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        footer {
+            margin-top: 14px;
+            text-align: center;
+            color: hsl(0, 0%, 40%);
+        }
+
+        footer hr {
+            display: block;
+            height: 0;
+            width: 60%;
+            border: 0;
+            border-top: 1px solid hsl(0, 0%, 87%);
+            border-bottom: 1px solid hsl(0, 0%, 97%);
+            margin-bottom: 6px;
+        }
+
+        footer a {
+            color: hsl(10, 70%, 35%);
+            font-weight: bold;
+            outline: 0;
+            transition: color .33s;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: hsl(10, 80%, 50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pro Settings with Raw JSON **Edit with Caution**</h1>
+    <textarea id="settings"></textarea>
+
+    <div class="buttons">
+        <button id="resetBtn">Reset to Default</button>
+        <button id="saveBtn">Save</button>
+        <span id="status"></span>
+    </div>
+
+    <footer>
+        <hr/>
+        <span>v<span id="version"></span>&nbsp;|</span>
+        Give us a ★ on <a target="_blank" href="https://github.com/dannvix/CapTube">GitHub</a>
+    </footer>
+    <script type="text/javascript" src="options.min.js"></script>
+</body>
+</html>

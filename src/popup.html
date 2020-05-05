@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <script type="text/javascript" src="popup.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="icon32.png" />
+      <span>CapTube 雙語字幕</span>
+      <hr/>
+    </header>
+
+    <section class="settings-layout">
+      <h2>Layout</h2>
+      <div data-id="0">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 100">
+          <rect x="5" y="5" width="150" height="90" rx="12" ry="12" fill="transparent" stroke="hsl(0, 0%, 80%)" stroke-width="6"/>
+          <line x1="40" y1="66" x2="120" y2="66" stroke="hsl(0, 0%, 30%)" stroke-width="4"/>
+          <line x1="40" y1="72" x2="120" y2="72" stroke="hsl(0, 0%, 30%)" stroke-width="4"/>
+        </svg>
+        <p>Compact</p>
+      </div>
+      <div data-id="1">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 100">
+          <rect x="5" y="5" width="150" height="90" rx="12" ry="12" fill="transparent" stroke="hsl(0, 0%, 80%)" stroke-width="6"/>
+          <line x1="40" y1="72" x2="120" y2="72" stroke="hsl(0, 0%, 30%)" stroke-width="4"/>
+          <line x1="40" y1="78" x2="120" y2="78" stroke="hsl(0, 0%, 30%)" stroke-width="4"/>
+        </svg>
+        <p>Moderate</p>
+      </div>
+      <div data-id="2">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 100">
+          <rect x="5" y="5" width="150" height="90" rx="12" ry="12" fill="transparent" stroke="hsl(0, 0%, 80%)" stroke-width="6"/>
+          <line x1="40" y1="80" x2="120" y2="80" stroke="hsl(0, 0%, 30%)" stroke-width="4"/>
+          <line x1="40" y1="86" x2="120" y2="86" stroke="hsl(0, 0%, 30%)" stroke-width="4"/>
+        </svg>
+        <p>Ease</p>
+      </div>
+    </section>
+
+    <section class="settings-primary-font-size">
+      <h2>Font Size — Primary & Secondary</h2>
+      <div class="font-size-list">
+        <div data-id="0" class="font-size font-size-xs">字</div>
+        <div data-id="1" class="font-size font-size-s">字</div>
+        <div data-id="2" class="font-size font-size-m">字</div>
+        <div data-id="3" class="font-size font-size-l">字</div>
+        <div data-id="4" class="font-size font-size-xl">字</div>
+      </div>
+    </section>
+
+    <section class="settings-secondary-font-size">
+      <h2>Font Size — Secondary</h2>
+      <div class="font-size-list">
+        <div data-id="0" class="font-size font-size-xs">A</div>
+        <div data-id="1" class="font-size font-size-s">A</div>
+        <div data-id="2" class="font-size font-size-m">A</div>
+        <div data-id="3" class="font-size font-size-l">A</div>
+        <div data-id="4" class="font-size font-size-xl">A</div>
+      </div>
+    </section>
+
+    <section class="settings-tencent-translation">
+      <h2><a href="https://console.cloud.tencent.com/cam/capi" target="_blank">Tencent Translation (TMT) API</a></h2>
+      <div class="tmt-setting-field">
+        <label for="tmtSecretId">Secret ID</label>
+        <input name="tmtSecretId"></input>
+      </div>
+      <div class="tmt-setting-field">
+        <label for="tmtSecretKey">Secret Key</label>
+        <input name="tmtSecretKey"></input>
+      </div>
+      <div class="tmt-setting-field">
+        <label for="tmtRegion">Region</label>
+        <input name="tmtRegion" value="ap-beijing"></input>
+      </div>
+      <div class="tmt-setting-field">
+        <label for="tmtProjectId">Project ID</label>
+        <input name="tmtProjectId" value="0"></input>
+      </div>
+    </section>
+
+    <section class="settings-deepl-translation">
+      <h2><a href="https://www.deepl.com/pro.html#developer" target="_blank">DeepL Translation (DMT) API</a></h2>
+      <div class="dmt-setting-field">
+        <label for="dmtApiKey">API Key</label>
+        <input name="dmtApiKey"></input>
+      </div>
+    </section>
+
+    <!--
+    <section class="settings-secondary-lang">
+      <h2>Secondary Language</h2>
+      <div id="secondary-lang-off">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 100">
+          <rect x="5" y="5" width="150" height="90" rx="12" ry="12" fill="transparent" stroke="hsl(0, 0%, 80%)" stroke-width="6"/>
+          <line x1="40" y1="72" x2="120" y2="72" stroke="hsl(0, 0%, 30%)" stroke-width="4"/>
+        </svg>
+        <p>Disabled</p>
+      </div>
+      <div id="secondary-lang-smart">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 100">
+          <rect x="5" y="5" width="150" height="90" rx="12" ry="12" fill="transparent" stroke="hsl(0, 0%, 80%)" stroke-width="6"/>
+          <line x1="40" y1="72" x2="120" y2="72" stroke="hsl(0, 0%, 30%)" stroke-width="4"/>
+          <line x1="40" y1="78" x2="120" y2="78" stroke="hsl(0, 0%, 30%)" stroke-width="4"/>
+        </svg>
+        <p>Smart</p>
+      </div>
+      <div id="secondary-lang-remembered">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 100">
+          <rect x="5" y="5" width="150" height="90" rx="12" ry="12" fill="transparent" stroke="hsl(0, 0%, 80%)" stroke-width="6"/>
+          <line x1="40" y1="72" x2="120" y2="72" stroke="hsl(0, 0%, 30%)" stroke-width="4"/>
+          <line x1="40" y1="78" x2="120" y2="78" stroke="hsl(0, 0%, 30%)" stroke-width="4"/>
+        </svg>
+        <p>Last Used</p>
+      </div>
+    </section>
+    -->
+
+    <footer>
+      <hr/>
+      <div>
+        <a id="btnReset" tabIndex="-1">Reset to Default</a>
+        &nbsp;|&nbsp;
+        <a id="btnProMode" tabIndex="-1">Pro Settings</a>
+      </div>
+      <hr/>
+
+      <span>v<span id="version"></span></span>
+      &nbsp;|&nbsp;
+      Give us a ★ on <a target="_blank" href="https://github.com/dannvix/CapTube">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>
