@@ -2,7 +2,7 @@
   "name": "captube",
   "description": "Dual subtitles with AI-enabled translations",
   "author": "Dan Chen",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "license": "MIT",
   "private": true,
   "scripts": {

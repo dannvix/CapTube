@@ -11,7 +11,8 @@ html, body {
   outline: 0;
   user-select: none;
   padding-top: 25px;
-  padding-bottom: 45px;
+  padding-bottom: 25px;
+  overscroll-behavior: none;
 }
 
 .wrapper {
@@ -53,9 +54,10 @@ header {
   letter-spacing: -0.5px;
   position: fixed;
   top: 0px;
-  background: hsl(0, 0%, 97%);
   width: 100%;
   padding-top: 10px;
+  padding-bottom: 6px;
+  background: linear-gradient(0deg, hsla(0, 0%, 97%, 0) 0%, hsla(0, 0%, 97%, 1) 15%, hsla(0, 0%, 97%, 1.0) 100%);
 }
 
 header img {
@@ -69,11 +71,21 @@ section {
 }
 
 section h2 {
-  color: hsl(0, 0%, 40%);
+  color: hsl(0, 0%, 50%);
   font-size: 14px;
   margin: 0 0 12px 0;
   padding: 6px 0;
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 92%);
+}
+
+section h2.active:after {
+  display: inline-block;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: hsl(120, 60%, 80%);
+  margin-left: 5px;
 }
 
 a {
@@ -99,9 +111,10 @@ footer {
   position: fixed;
   color: hsl(0, 0%, 50%);
   width: 100%;
-  background: hsl(0, 0%, 97%);
+  background: linear-gradient(180deg, hsla(0, 0%, 97%, 0) 0%, hsla(0, 0%, 97%, 1) 15%, hsla(0, 0%, 97%, 1.0) 100%);
   bottom: 0;
   padding-bottom: 10px;
+  padding-top: 6px;
 }
 
 .settings-secondary-lang {
@@ -162,14 +175,20 @@ footer {
   stroke: hsl(0, 80%, 50%);
 }
 
+.font-size-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .font-size {
   position: relative;
   height: 30px;
   width: 30px;
   border: 2px solid hsl(0, 0%, 70%);
-  color: hsl(0, 0%, 30%);
+  color: hsl(0, 0%, 40%);
   border-radius: 21px;
-  font-weight: bold;
+  font-weight: normal;
   align-items: stretch;
   display: inline-flex;
   flex-direction: column;
@@ -187,11 +206,11 @@ footer {
   cursor: pointer;
 }
 
-.font-size-xs { font-size:  9px; }
-.font-size-s  { font-size: 11px; }
-.font-size-m  { font-size: 13px; }
-.font-size-l  { font-size: 15px; }
-.font-size-xl { font-size: 17px; }
+.font-size-xs { font-size:  8px; }
+.font-size-s  { font-size: 12px; }
+.font-size-m  { font-size: 15px; }
+.font-size-l  { font-size: 17px; }
+.font-size-xl { font-size: 20px; }
 
 .settings-tencent-translation,
 .settings-deepl-translation {

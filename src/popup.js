@@ -109,7 +109,7 @@ function renderActiveSettings() {
 
   // Tencent Translation (TMT)
   const tmtTitleElem = document.querySelector('.settings-tencent-translation h2');
-  tmtTitleElem.style.color = (settings.tmtEnabled) ? 'hsl(120, 90%, 25%)' : 'hsl(0, 0%, 40%)';
+  tmtTitleElem.classList[(settings.tmtEnabled) ? 'add' : 'remove']('active');
   const tmtFieldNames = ['tmtSecretId', 'tmtSecretKey', 'tmtRegion', 'tmtProjectId'];
   tmtFieldNames.forEach(name => {
     const inputElem = document.querySelector(`input[name=${name}]`);
@@ -120,7 +120,7 @@ function renderActiveSettings() {
 
   // DeepL Translation (DMT)
   const dmtTitleElem = document.querySelector('.settings-deepl-translation h2');
-  dmtTitleElem.style.color = (settings.dmtEnabled) ? 'hsl(120, 90%, 25%)' : 'hsl(0, 0%, 40%)';
+  dmtTitleElem.classList[(settings.dmtEnabled) ? 'add' : 'remove']('active');
   const dmtFieldNames = ['dmtApiKey'];
   dmtFieldNames.forEach(name => {
     const inputElem = document.querySelector(`input[name=${name}]`);
